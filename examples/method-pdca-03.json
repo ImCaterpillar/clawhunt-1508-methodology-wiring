@@ -1,0 +1,21 @@
+{
+  "entry_id": "method-pdca-03",
+  "title": "PDCA 持续改进循环",
+  "methodology": "PDCA",
+  "topic": "质量改进",
+  "summary": "Plan-Do-Check-Act 四步循环，把改进活动变成可重复、可验证、可固化的流程。",
+  "steps": [
+    { "order": 1, "action": "Plan：识别问题、设定目标与可度量指标" },
+    { "order": 2, "action": "Do：小范围试点执行改进措施" },
+    { "order": 3, "action": "Check：对比现状与目标，验证效果" },
+    { "order": 4, "action": "Act：固化有效做法，未达标则进入下一轮" }
+  ],
+  "applicable_scenarios": ["质量事故复盘", "流程优化", "SOP 落地验证"],
+  "cited_sources": [
+    { "source_id": "src-deming-cycle", "reference": "Deming / Shewhart Cycle（管理经典）",
+      "excerpt": "The PDCA cycle provides a simple yet powerful approach for iterative problem solving and improvement." }
+  ],
+  "tags": ["quality", "continuous-improvement", "kaizen"],
+  "created_at": "2026-10-16",
+  "status": "published"
+}
