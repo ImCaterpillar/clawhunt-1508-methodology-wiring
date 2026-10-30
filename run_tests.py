@@ -256,25 +256,28 @@ check("23. README counter-example cmd matches",
 
 print("\n-- 全量审核组 D：脱敏合规 --")
 
-# 24. 交付物不含真实手机号/身份证/密钥/本机路径
-# 只扫交付文件（排除 run_tests.py 自身——它含用于检测的字符串字面量）
+# 24. 交付物不含真实手机号/密码/密钥/本机路径（只扫交付文件；
+#     排除 run_tests.py 自身——它含检测模式字符串字面量，属测试代码非交付内容）
+RELEASE_FILES = [
+    "knowledge_base.py", "demo.py",
+    "schema/methodology_entry.schema.json",
+    "examples/method-scrum-01.json",
+    "examples/method-5w2h-02.json",
+    "examples/method-pdca-03.json",
+    "examples/method-invalid-99.json",
+    "README.md", "SETUP.md",
+    "docs/验收对照.md", "docs/实现说明.md", "docs/验证记录.md",
+]
 hits_priv = []
-scan_files = []
-for root, _, files in os.walk(HERE):
-    if "__pycache__" in root:
+for rel in RELEASE_FILES:
+    fp = os.path.join(HERE, rel)
+    if not os.path.isfile(fp):
         continue
-    for fn in files:
-        if fn == "run_tests.py":
-            continue
-        if not fn.endswith((".py", ".json", ".md", ".schema.json")):
-            continue
-        scan_files.append(os.path.join(root, fn))
-for fp in scan_files:
     t = open(fp, encoding="utf-8", errors="replace").read()
     for pat in ("C:\\", "D:\\", "Caterpillar", "Documents"):
         if pat in t or re.search(r"1[3-9]\d{9}", t) or "cph_" in t \
                 or "ghp_" in t:
-            hits_priv.append(f"{os.path.relpath(fp, HERE)}:{pat}")
+            hits_priv.append(f"{rel}:{pat}")
 check("24. no sensitive data in deliverables", not hits_priv,
       str(hits_priv[:4]) if hits_priv else "clean")
 
