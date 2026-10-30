@@ -1,0 +1,21 @@
+{
+  "entry_id": "method-5w2h-02",
+  "title": "5W2H 问题定义",
+  "methodology": "5W2H",
+  "topic": "问题分析",
+  "summary": "用 What/Why/Where/When/Who/How/How-much 七个维度把模糊问题定义成可执行的任务分解。",
+  "steps": [
+    { "order": 1, "action": "What：明确要解决什么（目标与范围）" },
+    { "order": 2, "action": "Why：确认背后的原因与价值" },
+    { "order": 3, "action": "Where / When / Who：定位发生地点、时间窗口与责任方" },
+    { "order": 4, "action": "How / How much：确定执行路径、方法与成本" }
+  ],
+  "applicable_scenarios": ["招标需求澄清", "运营问题归因", "项目启动前的范围确认"],
+  "cited_sources": [
+    { "source_id": "src-5w2h-wiki", "reference": "5W2H / Six Ws 方法（管理工具通用定义）",
+      "excerpt": "Five Ws and one H: who, what, where, when, why, how — a framework for comprehensive problem formulation." }
+  ],
+  "tags": ["analysis", "framing", "requirements"],
+  "created_at": "2026-10-15",
+  "status": "published"
+}
