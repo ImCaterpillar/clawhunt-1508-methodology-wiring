@@ -1,0 +1,12 @@
+{
+  "entry_id": "method-bad-invalid-99",
+  "title": "无效条目：缺必填字段 + 额外字段 + 空步骤",
+  "methodology": "Bad",
+  "topic": "invalid",
+  "summary": "这个条目缺 entry_id、cited_sources 为空、steps 只有 1 步，还带了一个额外字段和一份可疑的真实资料。",
+  "steps": [ { "order": 1, "action": "只有一步，不满足 minItems=2" } ],
+  "applicable_scenarios": ["x"],
+  "cited_sources": [],
+  "extra_not_allowed_field": true,
+  "created_at": "2026-10-30"
+}
