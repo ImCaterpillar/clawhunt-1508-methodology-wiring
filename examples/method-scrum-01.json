@@ -1,0 +1,21 @@
+{
+  "entry_id": "method-scrum-01",
+  "title": "Scrum 迭代框架",
+  "methodology": "Scrum",
+  "topic": "敏捷研发",
+  "summary": "Scrum 通过固定节奏的迭代（Sprint）与三个角色、四个仪式、三件工件管理复杂产品开发。",
+  "steps": [
+    { "order": 1, "action": "规划 Sprint 目标并拆解待办（Product Backlog → Sprint Backlog）" },
+    { "order": 2, "action": "每日站会同步进度与障碍（15 分钟内）" },
+    { "order": 3, "action": "Sprint 评审展示可交付成果并收集反馈" },
+    { "order": 4, "action": "Sprint 回顾沉淀改进项并进入下一迭代" }
+  ],
+  "applicable_scenarios": ["跨职能团队迭代开发", "需求频繁变化的软件项目"],
+  "cited_sources": [
+    { "source_id": "src-scrum-guide", "reference": "Scrum Guide (2020), Schwaber & Sutherland",
+      "excerpt": "Sprints are the heartbeat of Scrum, where ideas are turned into value." }
+  ],
+  "tags": ["agile", "project-management", "sprint"],
+  "created_at": "2026-10-15",
+  "status": "published"
+}
